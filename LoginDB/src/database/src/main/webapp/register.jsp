@@ -14,17 +14,17 @@
     String lname = request.getParameter("lname");
     String email = request.getParameter("email");
     Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-    Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/demo",
-            "admin", "admin");
+    Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/database",
+            "admin", "123");
     Statement st = con.createStatement();
     //ResultSet rs;
-    int i = st.executeUpdate("insert into members(first_name, last_name, email, uname, pass, regdate) values ('" + fname + "','" + lname + "','" + email + "','" + user + "','" + pwd + "', CURDATE())");
+    int i = st.executeUpdate("insert into APP.USERS(uname, pass, regdate) values ('" + user + "','" + pwd + "', CURDATE())");
     if (i > 0) {
         //session.setAttribute("userid", user);
         response.sendRedirect("welcome.jsp");
-        // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
+        // out.print("Registration Successfull!"+"<a href='index.html'>Go to Login</a>");
     } else {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("index.html");
     }
 %>
 </body>

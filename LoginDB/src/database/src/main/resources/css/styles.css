@@ -1,0 +1,29 @@
+body{
+    color: white;
+    background: #1d2f53;
+}
+.module {
+    background: white;
+    border: 1px solid #ffffff;
+    margin: 3%;
+}
+.module > h2 {
+    text-align: center;
+    padding: 3rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.stripes {
+    color: #1d2f53;
+    background: white;
+}
+
+.containerForm {
+    position: absolute;
+    border: 2px solid #ffffff;
+    width: 60rem;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
