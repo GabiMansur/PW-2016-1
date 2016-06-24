@@ -21,9 +21,15 @@ body{
 .containerForm {
     position: absolute;
     border: 2px solid #ffffff;
+    margin:5px;
+    background: #222222;
     width: 60rem;
     top: 30%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+form{
+    padding: 10px;
 }
